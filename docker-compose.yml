@@ -26,7 +26,7 @@ x-common:
     MAIL_USERNAME: ""
     MAIL_PASSWORD: ""
     MAIL_ENCRYPTION: "true"
-    services:
+  services:
   database:
     image: mariadb:10.5
     restart: always
@@ -49,7 +49,7 @@ x-common:
     links:
       - database
       - cache
-      volumes:
+    volumes:
       - "/srv/pterodactyl/var/:/app/var/"
       - "/srv/pterodactyl/nginx/:/etc/nginx/http.d/"
       - "/srv/pterodactyl/certs/:/etc/letsencrypt/"
